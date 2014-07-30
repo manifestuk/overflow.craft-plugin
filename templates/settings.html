@@ -21,13 +21,13 @@
 }) }}
 
 {{ forms.textField({
-    label: "Soft Limit"|t,
+    label: "Overflow Limit"|t,
     instructions: "The maximum recommended number of characters."|t,
-    id: 'softLimit',
-    name: 'softLimit',
-    value: settings.softLimit,
+    id: 'overflowLimit',
+    name: 'overflowLimit',
+    value: settings.overflowLimit,
     size: 3,
-    errors: settings.getErrors('softLimit')
+    errors: settings.getErrors('overflowLimit')
 }) }}
 
 {{ forms.checkboxField({
