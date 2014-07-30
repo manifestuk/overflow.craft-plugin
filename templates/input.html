@@ -1,0 +1,17 @@
+{% import "_includes/forms" as forms %}
+
+{% set config = {
+    class: 'nicetext',
+    id: id,
+    maxlength: settings.maxLength,
+    name: name,
+    placeholder: settings.placeholder,
+    rows: settings.initialRows,
+    value: value
+} %}
+
+{% if settings.multiline %}
+    {{ forms.textarea(config) }}
+{% else %}
+    {{ forms.text(config) }}
+{% endif %}
