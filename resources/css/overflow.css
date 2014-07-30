@@ -1,9 +1,9 @@
 .overflowCounter {
-    color: #999;
+    color: #8F98A3;
     display: block;
-    font-size: 92%;
+    font-size: 12px;
     line-height: 1.5;
-    padding: 0.25em;
+    padding: 4px;
 }
 
 .overflowCounter.overflowed {
