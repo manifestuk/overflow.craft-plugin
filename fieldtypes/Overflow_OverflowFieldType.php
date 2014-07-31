@@ -20,7 +20,7 @@ class Overflow_OverflowFieldType extends PlainTextFieldType
     protected function defineSettings()
     {
         return array_merge(
-            ['softLimit' => [AttributeType::Number, 'min' => 0]],
+            ['overflowLimit' => [AttributeType::Number, 'min' => 0]],
             parent::defineSettings()
         );
     }
@@ -81,11 +81,11 @@ class Overflow_OverflowFieldType extends PlainTextFieldType
     {
         $jsId = craft()->templates->namespaceInputId($fieldId);
         $settings = $this->getSettings();
-        $softLimit = $settings['softLimit'];
+        $limit = $settings['overflowLimit'];
 
         craft()->templates->includeJsResource('overflow/js/overflow.js');
 
         craft()->templates->includeJs(
-            "$('#{$jsId}').overflow({ limit: {$softLimit} });");
+            "$('#{$jsId}').overflow({ limit: {$limit} });");
     }
 }
