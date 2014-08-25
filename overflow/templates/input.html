@@ -11,7 +11,7 @@
 } %}
 
 {% if settings.multiline %}
-    {{ forms.textarea(config) }}
+    {% include "overflow/_includes/forms/textarea" with config only %}
 {% else %}
     {{ forms.text(config) }}
 {% endif %}
