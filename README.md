@@ -1,9 +1,7 @@
 # Craft Overflow Field Type
 The Overflow field type displays the number of characters entered in a field, and the total number of "recommended" characters. If the user exceeds the recommended total, the counter turns red.
 
-![An example Overflow field.][overflowScreenshot]
-
-[overflowScreenshot]: ./docs/img/screenshot.png "An example Overflow field" height=231px width=447px
+![An example Overflow field](docs/img/screenshot.png)
 
 Unlike the standard Craft Plain Text field type, Overflow also _enforces_ the maximum character count, allowing you to set both a "soft limit" and a "hard limit" on the field.
 
