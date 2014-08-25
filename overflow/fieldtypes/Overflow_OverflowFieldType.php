@@ -83,6 +83,10 @@ class Overflow_OverflowFieldType extends PlainTextFieldType
         $settings = $this->getSettings();
         $limit = $settings['overflowLimit'];
 
+        if ( ! $limit = $settings['overflowLimit']) {
+            return;
+        }
+
         craft()->templates->includeJsResource(
             'overflow/js/jquery.overflow.js');
 
