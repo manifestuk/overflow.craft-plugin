@@ -9,9 +9,11 @@ Unlike the standard Craft Plain Text field type, Overflow also _enforces_ the ma
 Overflow has been tested with Craft 2.1.
 
 ## Installation
-1. Download and unzip the Overflow plugin.
+1. [Download][githubDownload] and unzip the Overflow plugin.
 2. Move the `overflow` directory to your `/craft/plugins` directory.
 3. Go to the "Settings &rarr; Plugins" page in your admin area, and click on the "Install" button next to the Overflow plugin.
+
+[githubDownload]: https://github.com/experience/overflow.craft/archive/master.zip "Download the latest ZIP"
 
 ## Field Configuration
 An Overflow field accepts two optional settings:
