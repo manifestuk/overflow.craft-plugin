@@ -11,23 +11,23 @@
 }) }}
 
 {{ forms.textField({
-    label: "Max Length"|t,
-    instructions: "The maximum length of characters the field is allowed to have."|t,
-    id: 'maxLength',
-    name: 'maxLength',
-    value: settings.maxLength,
-    size: 3,
-    errors: settings.getErrors('maxLength')
-}) }}
-
-{{ forms.textField({
-    label: "Overflow Limit"|t,
-    instructions: "The maximum recommended number of characters."|t,
+    label: "Soft Limit"|t,
+    instructions: "The recommended maximum number of characters."|t,
     id: 'overflowLimit',
     name: 'overflowLimit',
     value: settings.overflowLimit,
     size: 3,
     errors: settings.getErrors('overflowLimit')
+}) }}
+
+{{ forms.textField({
+    label: "Hard Limit"|t,
+    instructions: "The absolute maximum number of characters."|t,
+    id: 'maxLength',
+    name: 'maxLength',
+    value: settings.maxLength,
+    size: 3,
+    errors: settings.getErrors('maxLength')
 }) }}
 
 {{ forms.checkboxField({
