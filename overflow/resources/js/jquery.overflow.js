@@ -39,7 +39,7 @@
         {
             var $el = $(el);
             var $counter = $el.next('.overflowCounter');
-            var count = $el.val().length;
+            var count = countCharacters($el.val());
 
             if (count > options.limit) {
                 $counter.addClass('overflowed');
@@ -48,6 +48,22 @@
             }
 
             $counter.html(renderCounter(count, options.limit));
+        }
+
+        /**
+         * Counts the number of characters in the given string. Line-breaks
+         * are counted as two characters, as per the HTML spec.
+         *
+         * @param string val
+         *
+         * @return int
+         */
+        function countCharacters(val)
+        {
+            var linebreaks = val.match(/(\r\n|\n|\r)/g);
+            var extras = linebreaks ? linebreaks.length : 0;
+
+            return val.length + extras;
         }
 
         function renderCounter(count, limit)
