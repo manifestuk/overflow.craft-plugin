@@ -35,6 +35,13 @@
             });
         }
 
+        /**
+         * Update the counter.
+         *
+         * @param object el
+         *
+         * @return void
+         */
         function checkCount(el)
         {
             var $el = $(el);
@@ -66,6 +73,14 @@
             return val.length + extras;
         }
 
+        /**
+         * Generate the counter text.
+         *
+         * @param int count
+         * @param int limit
+         *
+         * @return string
+         */
         function renderCounter(count, limit)
         {
             return parseString(options.counterFormat, {
@@ -75,6 +90,14 @@
             });
         }
 
+        /**
+         * Replace template placeholders with the given template variables.
+         *
+         * @param string template
+         * @param object templateVars
+         *
+         * @return string
+         */
         function parseString(template, templateVars)
         {
             var val, needle;
