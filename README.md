@@ -6,7 +6,7 @@ The Overflow field type displays the number of characters entered in a field, an
 Unlike the standard Craft Plain Text field type, Overflow also _enforces_ the maximum character count, allowing you to set both a "soft limit" and a "hard limit" on the field.
 
 ## Requirements
-Overflow has been tested with Craft 2.1.
+Overflow requires PHP 5.4 or above, and has been tested with Craft 2.1.
 
 ## Installation
 1. [Download][githubDownload] and unzip the Overflow plugin.
