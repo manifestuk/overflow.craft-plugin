@@ -1,30 +1,30 @@
-# Craft Overflow Field Type
-The Overflow field type displays the number of characters entered in a field, and the total number of "recommended" characters. If the user exceeds the recommended total, the counter turns red.
+# Overflow
+Overflow is a plain text Craft field type, with a soft or hard character limit. It's perfect for things such as metadata titles and descriptions, which have an "ideal" length, but not an absolute limit.
 
-![An example Overflow field](docs/img/screenshot.png)
+Overflow will gently inform your content authors when they exceed a soft character limit, but will still allow the entry to be saved.
 
-Unlike the standard Craft Plain Text field type, Overflow also _enforces_ the maximum character count, allowing you to set both a "soft limit" and a "hard limit" on the field.
+Opting for a hard limit causes Overflow to behave exactly like [the built-in plain text field][craft-plaintext].
 
 ## Requirements
-Overflow requires PHP 5.4 or above, and has been tested with Craft 2.1.
+Overflow requires Craft 3.0.0+.
 
 ## Installation
-1. [Download][githubDownload] and unzip the Overflow plugin.
-2. Move the `overflow` directory to your `/craft/plugins` directory.
-3. Go to the "Settings &rarr; Plugins" page in your admin area, and click on the "Install" button next to the Overflow plugin.
+You can install Overflow via [the Craft Plugin Store][store].
 
-[githubDownload]: https://github.com/experience/overflow.craft/archive/master.zip "Download the latest ZIP"
+[store]: https://craftcms.com/features/plugin-store
 
-## Field Configuration
-An Overflow field accepts two optional settings:
+If you're [a `1337` hacker][iamdevloper], you can also install it via Composer, as follows:
 
-1. **Soft Limit** is the _recommended_ maximum number of characters. Setting this to a positive integer will cause Overflow to display a message beneath the field detailing the number of characters entered, and the soft limit (e.g. "21 of 25").
-2. **Hard Limit** is _absolute_ maximum number of characters. Setting this to a positive integer will cause Overflow to add the `maxlength` attribute to the form field, thereby limiting the number of characters that the field will accept.
+[iamdevloper]: https://twitter.com/iamdevloper
 
-Note that whilst it is possible to make the soft limit larger than the hard limit, it makes no sense to do so.
+```
+$ cd /path/to/project
+$ composer require experience/overflow
+```
 
-## Support
-If you've found a bug, please [create an issue][newIssue]. If you want to shower us with praise and fiscal appreciation, you can start by [finding us on Twitter][experienceTwitter].
+## Field configuration
+Overflow adds a new "Enforce character limit" checkbox to [the plain text field][craft-plaintext] settings.
 
-[newIssue]: https://github.com/experience/overflow.craft/issues/new "File a bug report"
-[experienceTwitter]: https://twitter.com/exphq/ "The appropriate channel for mad props"
+Check the box to enforce the character limit (the standard plain text field behaviour). Leave the box unchecked for a soft character limit.
+
+[craft-plaintext]: https://docs.craftcms.com/v3/plain-text-fields.html

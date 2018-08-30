@@ -1,0 +1,4 @@
+/* Use a milder colour for a soft-limit overflow */
+[data-overflow-enforce-limit="false"] .chars-left.negative-chars-left {
+    color: rgb(244, 182, 56);
+}
