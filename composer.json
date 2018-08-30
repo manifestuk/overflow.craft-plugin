@@ -1,0 +1,41 @@
+{
+  "name": "experience/overflow",
+  "description": "A plain text field with a soft or hard character limit",
+  "type": "craft-plugin",
+  "version": "2.0.0",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "craft-plugin",
+    "overflow"
+  ],
+  "support": {
+    "docs": "https://github.com/experience/overflow.craft-plugin/blob/master/README.md",
+    "issues": "https://github.com/experience/overflow.craft-plugin/issues"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Experience",
+      "homepage": "https://experiencehq.net"
+    }
+  ],
+  "require": {
+    "craftcms/cms": "^3.0.0-RC1"
+  },
+  "autoload": {
+    "psr-4": {
+      "experience\\overflow\\": "src/"
+    }
+  },
+  "extra": {
+    "changelogUrl": "https://raw.githubusercontent.com/experience/overflow.craft-plugin/master/CHANGELOG.md",
+    "class": "experience\\overflow\\Overflow",
+    "handle": "overflow",
+    "hasCpSection": false,
+    "hasSettings": false,
+    "name": "Overflow",
+    "sourceLanguage": "en-GB"
+  }
+}
